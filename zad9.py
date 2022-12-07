@@ -1,12 +1,13 @@
-pierwsze = []
-for liczba in range(2,100):
-    czy_pierwsza = True
-    for i in pierwsze:
-        if liczba % i == 0:
-            czy_pierwsza = False
-    if czy_pierwsza:
-        pierwsze.append(liczba)
+
 def factorize(n):
+    pierwsze = []
+    for liczba in range(2, 100):
+        czy_pierwsza = True
+        for i in pierwsze:
+            if liczba % i == 0:
+                czy_pierwsza = False
+        if czy_pierwsza:
+            pierwsze.append(liczba)
     x = 0
     if n > 1:
         while n% pierwsze[x] != 0:
@@ -15,9 +16,4 @@ def factorize(n):
         factorize((n/pierwsze[x]))
 
 
-factorize(96)
-
-
-
-
-
+factorize(1470)
